@@ -1,27 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<title>Midterm 1</title>
+	<meta name="Marco Rosales">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css"> </head>
 
-  <title>Midterm 1</title>
-  <meta name="Marco Rosales">
-  
-  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-         rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
-         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/styles.css" rel="stylesheet">  
-
-  <link rel="stylesheet" href="css/styles.css">
-
-</head>
-
-<body>
-  <script src="js/functions.js"></script>
+<body class="text-center">
+	<div class="jumbotron">
+		<h1>Midterm Webpages</h1>
+		<!--Start of Navigation Menu-->
+		<nav> <a class="current" href="index.html"> Home</a> <a class="link" href="calc.html"> Calculations</a> <a class="link" href="earthquake.html"> Earthquake</a> <a class="link" href="pixabay.html"> Pixabay</a> </nav>
+		<!--End of Navigation Menu-->
+	</div>
+	<!--Start of input using textbox, slide down and radios. Used from lab 3-->
+	<!-- Question 1 -->
+	<h2><span id="markImg1"></span> What is the capital of California?</h2>
+	<input type="text" id="q1">
+	<br>
+	<br>
+	<div id="q1Feedback"></div>
+	<br>
+	<!-- Question 2 -->
+	<h2><span id="markImg2"></span>What is the longest river?</h2>
+	<select id="q2">
+		<option value="">Select One</option>
+		<option value="ms">Mississippi</option>
+		<option value="mo">Missouri</option>
+		<option value="co">Colorado</option>
+		<option value="de">Delaware</option>
+	</select>
+	<br>
+	<br>
+	<div id="q2Feedback"></div>
+	<br>
+	<!-- Question 3 -->
+	<h2><span id="markImg3"></span>What presidents are carved into mount Rushmore?</h2>
+	<input type="checkbox" id="Jackson">
+	<label for="Jackson">A.Jackson</label>
+	<input type="checkbox" id="Franklin">
+	<label for="Franklin">B. Franklin</label>
+	<input type="checkbox" id="Jefferson">
+	<label for="Jefferson">T. Jefferson</label>
+	<input type="checkbox" id="Roosevelt">
+	<label for="Roosevelt">T. Roosevelt</label>
+	<br>
+	<br>
+	<div id="q3Feedback"></div>
+	<br>
+	<!-- Question 4 -->
+	<h2><span id="markImg4"></span> What is the smallest US State?</h2>
+	<div id="q4Choices"></div>
+	<br>
+	<br>
+	<div id="q4Feedback"></div>
+	<br>
+	<h2 id="validationFdbk" class="bg-danger text-white"></h2>
+	<button class="btn btn-success"> Submit Quiz </button>
+	<br>
+	<br>
+	<h2 id="totalScore" class="text-info"></h2>
+	<h2 id="totalAttempts"></h2>
+	<h2 id="congratulations"></h2>
+	<!--End of input using textbox, slide down and radios. Used from lab 3-->
+	<br>
+	<br>
+	<!--Beginning of Footer-->
+	<footer>
+		<hr />
+		<h5>CST 336 Internet Programming. 2020&copy; Rosales.</h5> <img src="img/logo.png" width="100" alt="logo">
+		<h5>This website is for academic purposes only.</h5> </footer>
+	<!--End of Footer-->
+	<script src="js/functions.js"></script>
 </body>
+
 </html>
