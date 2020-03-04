@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
+          <link href="css/styles.css" rel="stylesheet" type="text/css" />
+          <meta charset="utf-8">
+       <title>Midterm</title>
+     <script>
+     /* global $ */
+        $(document).ready(function(){
+            $.ajax({
+                    method: "GET",
+                    url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php?",
+                    dataType: "json",
+                    data: {"videoId": "VMqcLUqYqrs" },
+                    success:function(result,status){
+                        // alert(result.likes);
+                        $("#numOfLikes").html(result.likes);
+                        $("#numOfDislikes").html(result.dislikes);
+                    }
+                })
+             $("#comments").on("click",function(){
+                  $.ajax({
+                    method: "GET",
+                    url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php?",
+                    dataType: "json",
+                    data: {"videoId": "VMqcLUqYqrs",
+                        "action" : "comments"
+                    },
+                    success:function(result,status){
+                        result = _.shuffle(result);
+                         for(let i =0; i < result.length; i++)
+                         {
+                              $("#showComment").append(result[i].author + "<br>" + result[i].comment+"<br><br>");
+                         }
+                    }
+                })
+             })
+             $("#likes").on("click",function() {
+                 $("#likes").css("display","none");
+                 $("#cancellikes").css("display","inline")
+                  $.ajax({
+                    method: "GET",
+                    url: "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php?",
+                    dataType: "json",
+                    data: {"videoId": "VMqcLUqYqrs",
+                    "action" : "like"},
+                    success:function(result,status){
+                        // alert(result.likes);
+                        $("#numOfLikes").html(result.likes);
+                        $("#numOfDislikes").html(result.dislikes);
+                    }
+                })
+             })
+            let Response = $("#dropdown").val();
+            $("#question").on("click",function(){drop()})
+            function drop(){
+                let myElement = document.querySelector("#myDropdown");
+                myElement.style.display = "block";
+            }
+            function grade(){
+                if(Response == "smart"){
+                    document.write("You're right!");
+                }
+                else{
+                    document.write("You're wrong!");
+                }
+            }
+        })
+    </script>
+    <style>
+        #cancellikes{
+            display:none;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>MIDTERM</h1>
+        <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/VMqcLUqYqrs">
+        </iframe>
+        <br>
+        <button id="comments">See<br> Comments</button>
+        <button id="question">Answer<br> Question</button>
+        <button id="likes"><img src="img/like.png"></img></button>
+        <button id="cancellikes"><img src="img/cancel_like.png" width="50"></img></button>
+        <span id="numOfLikes"></span>
+        <button id="dislike"><img src="img/dislike.png"></img></button>
+        <span id="numOfDislikes"></span>
+        <div id="showComment"></div>
+          <div id="myDropdown">
+          <span id="about"><font size="6"><strong>What was the video about?</strong></font></span><br>
+                <select id="dropdown">
+                    <option value="">Select best Answer</option>
+                    <option value="education">Education</option>
+                    <option value="smart">We are not the smartest Country</option>
+                    <option value="sports">Sports events</option>
+                    <option value="csumb">CSUMB</option>
+                </select>
+                <div id="q7feedback"></div>
+          </div>
+            <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+    </body>
+</html>
