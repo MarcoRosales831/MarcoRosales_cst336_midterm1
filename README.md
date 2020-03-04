@@ -10,168 +10,50 @@ Synopsis
 
 1. Question 1
   - [x] Summary: 
-    - I
+    - a. 1) Inline. This is when the style is included within a specific html element.
+    - a. 2) Embedded i.e. Internal. This is when the styles are included in the head or
+    - styles tags. But the scope is limited to the current page.
+    -  a. 3) External. This is when the styles are placed in a external file and can be
+    -  accessed by an html file using a link tag.
+    - Precedence order is Inline (highest) then Embeded (next highest) then External (lowest)
     - 
-    - 
-    - 
+    - b) Margin is the area outside the border i.e. the space around the outside of the element.
+    - This is transparent. Padding is the space just around the content around paragraph text.
+    - This is transparent and makes the text become closer to the border.
 
 2. Question 2
   - [x] Summary: 
-    - I
-    - 
-    - 
+    - a) !== Compares not equal between two variables without comparing the datatype
+    - !=== Compares not equal between two variables and also checks if the datatypes are the same.
+    - b) undefined
     - 
 
 3. Question 3
   - [x] Summary: 
-    - I
-    - 
+    - First output (console.log(a1) will be 1,2
+    - Second output (console.log(a1)) will be 3,4,... .10000, 10001, 10002, ...., 100000
     - 
     - 
 
 4. Question 4
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-5. Question 5
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-6. Question 6
-  - [x] Summary: 
-    - I
-    - 
-    - 
+  - [x] Summary: Drawing on paper
+ HTML
+HEAD
+#text:
+TITLE
+#text: My page
+#text:
+#text:
+BODY
+#text:
+IMG width="100px" height="100px" src="myimage.jpg"
+#text:
+P
+SPAN
+#text: My Name
+#text: and My Info< /p> 
     - 
 
-7. Question 7
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-8. Question 8
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-9. Question 9
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-10. Question 10
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-11. Question 11
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-12. Question 12
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-13. Question 13
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-14. Question 14
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
-
-15. Question 15
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-16. Question 16
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-17. Question 17
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-18. Question 18
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-19. Question 19
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-20. Question 20
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-21. Question 21
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-22. Question 22
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-23. Question 23
-  - [x] Summary: 
-    - I
-    - 
-    - 
-
-24. Question 24
-  - [x] Summary: 
-    - I
-    - 
-    - 
-    - 
- 
- 25. Question 25
-  - [x] Summary: 
-    - I
-    - 
-    - 
 
 
 ## Midterm Website Notes
